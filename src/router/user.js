@@ -1,10 +1,13 @@
 const { Router } = require("express");
 const { userSchema } = require("../module/validator");
+const prisma = require("../prisma");
 
 const userRouter = Router();
 
-userRouter.get("/view/user", (req, res) => {
-  res.status(200).render("user");
+userRouter.get("/view/user", async (req, res) => {
+  const users = await prisma.user.findMany();
+
+  res.status(200).render("user", { users });
 });
 
 userRouter.post("/user", async (req, res) => {

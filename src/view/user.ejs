@@ -15,6 +15,34 @@
     <h1>Usuários</h1>
     <button type="button" onclick="openCreateModal()">Cadastrar</button>
 
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Cpf</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for (user of users) { %>
+        <tr>
+          <td><%- user.id %></td>
+          <td><%- user.name %></td>
+          <td><%- user.email %></td>
+          <td><%- user.cpf %></td>
+          <td>
+            <div>
+              <button type="button">Editar</button>
+              <button type="button">Remover</button>
+            </div>
+          </td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+
     <script>
       const test = {
         name: "Simone Gabrielly Aline Gonçalves",
