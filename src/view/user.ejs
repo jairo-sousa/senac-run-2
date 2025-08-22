@@ -13,5 +13,19 @@
   </head>
   <body>
     <h1>Usuários</h1>
+    <button type="button" onclick="openCreateModal()">Cadastrar</button>
+
+    <script>
+      const test = {
+        name: "Simone Gabrielly Aline Gonçalves",
+        email: "simone.gabrielly.goncalves@bluespropaganda.com",
+        cpf: "957.213.573-20",
+        password: "sdsd",
+        profile_id: "1",
+      };
+      const openCreateModal = async () => {
+        const response = await sendDataRequest("/user", "POST", test);
+      };
+    </script>
   </body>
 </html>

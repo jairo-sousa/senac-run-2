@@ -19,7 +19,9 @@
   "homepage": "https://github.com/jairo-sousa/senac-run-2#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "cpf-cnpj-validator": "^1.0.3",
     "ejs": "^3.1.10",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "zod": "^4.0.17"
   }
 }
